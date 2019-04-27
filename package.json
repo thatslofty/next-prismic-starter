@@ -1,0 +1,43 @@
+{
+  "name": "next-prismic-starter",
+  "description": "Simple next.js & prismic cms starter app",
+  "version": "0.0.1",
+  "author": "Thats Lofty",
+  "private": true,
+  "scripts": {
+    "dev": "next -p 4040",
+    "deploy": "now alias $(now) next-prismic-starter.com",
+    "now-build": "next build && next export -o dist",
+    "dev:deploy": "GIT_TOKEN=aaa123 GIT_REPO=https://github.com/alexmarmon/rocktech.git micro-dev deploy.js"
+  },
+  "dependencies": {
+    "@octokit/rest": "^16.9.0",
+    "@zeit/next-css": "^1.0.1",
+    "babel-eslint": "^10.0.1",
+    "babel-plugin-macros": "^2.4.2",
+    "babel-plugin-module-resolver": "^3.1.1",
+    "babel-plugin-styled-components": "^1.8.0",
+    "babel-preset-react": "^6.24.1",
+    "eslint": "^5.8.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-react": "^7.11.1",
+    "next": "8.1.0",
+    "next-ga": "^2.3.4",
+    "preval.macro": "^3.0.0",
+    "prismic-javascript": "^2.0.1",
+    "prismic-reactjs": "^0.3.2",
+    "react": "^16.6.0",
+    "react-dom": "^16.6.0",
+    "react-hamburger-menu": "^1.1.1",
+    "react-markdown": "^4.0.3",
+    "rebass": "3.1.0",
+    "styled-components": "^4.0.3",
+    "sync-request": "^6.0.0"
+  },
+  "devDependencies": {
+    "micro": "^9.3.3",
+    "micro-dev": "^3.0.0"
+  }
+}
