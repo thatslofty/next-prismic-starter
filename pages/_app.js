@@ -1,19 +1,15 @@
 /*
-* custom _app is for meta title and providing cms content
+* custom _app is for meta title and providing global cms content
 */
 import App, { Container } from 'next/app'
 import Head from 'next/head'
 import React from 'react'
 import withGA from 'next-ga'
 import Router from 'next/router'
-import { CopyContext } from 'context/copy'
-import { ImagesContext } from 'context/images'
-import { ProductsContext } from 'context/products'
-import { ProductDataContext } from 'context/product-data'
-import Header from 'components/header'
+// import Header from 'components/header'
 import Footer from 'components/footer'
 
-import data from /* preval */ 'context/data'
+// import data from /* preval */ 'context/data'
 
 class NextPrismicStarter extends App {
   static async getInitialProps({ Component, ctx }) {
@@ -23,29 +19,20 @@ class NextPrismicStarter extends App {
       pageProps = await Component.getInitialProps(ctx)
     }
 
-    return { pageProps, data }
+    // return { pageProps, data }
+    return { pageProps }
   }
 
   render() {
     const { Component, pageProps } = this.props
-    const {
-      Copy, Images, Products, ProductData
-    } = this.props.data
+    // const { data } = this.props.data
     return (
       <Container>
         <Head>
-          <title>RockTech USA</title>
+          <title>Next Prismic Starter</title>
         </Head>
-        <Header />
-        <CopyContext.Provider value={Copy}>
-          <ImagesContext.Provider value={Images}>
-            <ProductsContext.Provider value={Products}>
-              <ProductDataContext.Provider value={ProductData}>
-                <Component {...pageProps} />
-              </ProductDataContext.Provider>
-            </ProductsContext.Provider>
-          </ImagesContext.Provider>
-        </CopyContext.Provider>
+        {/* <Header /> */}
+        <Component {...pageProps} />
         <Footer />
       </Container>
     )

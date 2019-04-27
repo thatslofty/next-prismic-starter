@@ -13,23 +13,3 @@ export const media = Object.keys(sizes).reduce((acc, label) => {
   `
   return acc
 }, {})
-
-export const coverImg = `
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-`
-
-export const containImg = `
-  background-size: contain;
-  background-position: center center;
-  background-repeat: no-repeat;
-`
-
-export const clearFix = `
-  &::after{
-    content: "";
-    clear: both;
-    display: table;
-  }
-`
