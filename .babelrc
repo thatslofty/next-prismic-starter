@@ -1,6 +1,7 @@
 {
   "plugins": [
-    "macros",
+    ["@babel/plugin-proposal-decorators", { "legacy": true }],
+    ["@babel/plugin-proposal-class-properties", { "loose": true }],
     [
       "styled-components",
       {
@@ -16,8 +17,8 @@
         "alias": {
           "components": "./components",
           "styles": "./styles",
-          "context": "./context",
-          "static": "./static"
+          "static": "./static",
+          "theme": "./theme.js"
         }
       }
     ]

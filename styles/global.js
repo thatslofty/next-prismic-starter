@@ -1,6 +1,4 @@
-// import React from 'react'
-import styled, { createGlobalStyle } from 'styled-components'
-// import { mediaQueries } from './variables'
+import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyle = createGlobalStyle`
   html {
@@ -11,6 +9,10 @@ export const GlobalStyle = createGlobalStyle`
     font: initial;
     box-sizing: unset;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  }
+
+  * {
+    box-sizing: border-box;
   }
 
   div,
@@ -29,14 +31,6 @@ export const GlobalStyle = createGlobalStyle`
     height: 100%;
   }
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5 {
-    font-family: 'Montserrat';
-  }
-
   p {
     margin: 0;
   }
@@ -47,6 +41,9 @@ export const GlobalStyle = createGlobalStyle`
   textarea:focus {
     outline: none;
   }
-`
 
-
+  ul, ol {
+    list-style-type: disc;
+    list-style-position: inside;
+  }
+`;

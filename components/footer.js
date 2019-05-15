@@ -1,20 +1,24 @@
-import React from 'react'
-import Link from 'next/link'
-import { withRouter } from 'next/router'
-import styled from 'styled-components'
-import { styles } from 'styles/variables'
+import React from 'react';
+import Link from 'next/link';
+import { withRouter } from 'next/router';
+import styled from 'styled-components';
+import { variables } from 'styles';
 
-import { Contact } from /* preval */ 'context/data'
+import { Contact } from /* preval */ 'context/data';
 
 const Footer = ({ router }) => (
   <FooterStyles>
-    <Link href="/"><a className={router.pathname === '/' ? 'currentPage' : ''}>Home</a></Link>
-    <Link href="/about"><a className={router.pathname === '/about' ? 'currentPage' : ''}>About</a></Link>
+    <Link href='/'>
+      <a className={router.pathname === '/' ? 'currentPage' : ''}>Home</a>
+    </Link>
+    <Link href='/about'>
+      <a className={router.pathname === '/about' ? 'currentPage' : ''}>About</a>
+    </Link>
   </FooterStyles>
-)
+);
 
 const FooterStyles = styled.div`
-  background-color: ${styles.backgroundLight};
+  background-color: ${variables.backgroundLight};
 `;
 
-export default withRouter(Footer)
+export default withRouter(Footer);
