@@ -2,14 +2,14 @@ import { generateMedia } from 'styled-media-query';
 import { css } from 'styled-components';
 
 export const variables = {
-  backgroundLight: '#ccc'
+  backgroundLight: '#ccc',
 };
 
 export const media = generateMedia({
   xs: '576px',
   sm: '768px',
   md: '992px',
-  lg: '1200px'
+  lg: '1200px',
 });
 
 export const textCss = css`

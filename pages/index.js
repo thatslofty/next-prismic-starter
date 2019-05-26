@@ -31,7 +31,7 @@ HomePage.getInitialProps = async ({ req }) => {
   const posts = await get('at(document.type,"posts")');
 
   return {
-    posts
+    posts,
   };
 };
 
