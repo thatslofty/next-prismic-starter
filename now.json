@@ -1,5 +1,6 @@
 {
   "version": 2,
+  "scope": "thatslofty",
   "name": "next-prismic-starter",
   "alias": ["next-prismic-starter"],
   "builds": [
