@@ -3,18 +3,10 @@
   "name": "next-prismic-starter",
   "alias": ["next-prismic-starter"],
   "builds": [
-    { "src": "deploy.js", "use": "@now/node" },
-    { "src": "package.json", "use": "@now/static-build" }
+    { "src": "next.config.js", "use": "@now/next" }
   ],
   "routes": [
     { "src": "/admin", "status": 301, "headers": { "Location": "https://next-prismic-starter.prismic.io/documents/working/" }},
-    { "src": "/api/deploy", "dest": "deploy.js" },
     { "src": "/(.*)", "dest": "$1" }
-  ],
-  "env": {
-    "ZEIT_TOKEN": "aaa123",
-    "GIT_TOKEN": "aaa123",
-    "GIT_USER": "alexmarmon",
-    "GIT_REPO": "https://github.com/alexmarmon/next-prismic-starter.git"
-  }
+  ]
 }

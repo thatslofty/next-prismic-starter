@@ -4,8 +4,6 @@ import { withRouter } from 'next/router';
 import styled from 'styled-components';
 import { variables } from 'styles';
 
-import { Contact } from /* preval */ 'context/data';
-
 const Footer = ({ router }) => (
   <FooterStyles>
     <Link href='/'>
