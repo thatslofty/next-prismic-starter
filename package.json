@@ -9,7 +9,6 @@
     "deploy": "now alias $(now) next-prismic-starter.com"
   },
   "dependencies": {
-    "@babel/core": "^7.4.5",
     "@zeit/next-css": "^1.0.1",
     "isomorphic-unfetch": "^3.0.0",
     "next": "8.1.0",
@@ -27,6 +26,7 @@
     "styled-media-query": "^2.1.1"
   },
   "devDependencies": {
+    "@babel/core": "^7.4.5",
     "@babel/plugin-proposal-class-properties": "^7.3.3",
     "@babel/plugin-proposal-decorators": "^7.3.0",
     "babel-eslint": "^10.0.1",
