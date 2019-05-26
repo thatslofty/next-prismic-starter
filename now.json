@@ -2,7 +2,7 @@
   "version": 2,
   "scope": "thatslofty",
   "name": "next-prismic-starter",
-  "alias": ["next-prismic-starter"],
+  "alias": ["next-prismic-starter.thatslofty.com"],
   "builds": [
     { "src": "next.config.js", "use": "@now/next" }
   ],
